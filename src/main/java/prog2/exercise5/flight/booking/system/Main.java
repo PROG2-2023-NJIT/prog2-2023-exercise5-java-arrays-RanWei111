@@ -8,7 +8,7 @@ public class Main
     {   
         int size = 3;
         FlightBooking fb = new FlightBooking(size);
-        String fullName[] = new String[size];
+        /*String fullName[] = new String[size];
         String gender[] = new String[size];
         int age[]= new int[size];
         Scanner sc = new Scanner(System.in);
@@ -22,14 +22,38 @@ public class Main
             System.out.println("Your age");
             fb.setPassengerAge(i, age[i]);
             age[i] = sc.nextInt();
-        }
+        }*/
         fb.setDepartingTicketPrice(0, 3);
         
         fb.setReturnTicketPrice();
 
         fb.setTotalTicketPrice();
-        double a = fb.getTotalTicketPrice();
-        System.out.println(a);
+        fb.setTripSource("1");
+        fb.setSourceAirport("1");
+
+        fb.setTripDestination("1", "3");
+        fb.setDestinationAirport("1", "3");
+
+        fb.setTripType("2");
+
+        fb.setBookingClass("1");
+
+        String sdepart = "2023-04-12";
+        LocalDate departingOn = LocalDate.parse(sdepart);
+
+        String returnD = "2023-05-12";
+        LocalDate returningOn = LocalDate.parse(returnD);
+
+        fb.setDepartureDate(departingOn);
+        fb.setReturnDate(returningOn);
+
+        fb.setDepartingTicketPrice(0, 3);
+        
+        fb.setReturnTicketPrice();
+
+        fb.setTotalTicketPrice();
+        double returnedTicketPrice = fb.getTotalTicketPrice();
+        System.out.println(returnedTicketPrice);
 
         /*FlightBooking fb = new FlightBooking(size);
         System.out.println("Choose your trip source:\n1. Nanjing\n2. Beijing\n3. Oulu\n4. Helsinki\n5.Paris\n6.Shanghai");
@@ -75,7 +99,7 @@ public class Main
         "Date of return: "+fb.getReturnDate()+"\n"+
         "Total passengers: "+fb.getTotalPassengers()+"\n"+
         "Total ticket price in Euros: "+fb.getTotalTicketPrice());*/
-        sc.close();
+        //sc.close();
     }
 }
 

@@ -301,8 +301,8 @@ public class FlightBooking {
     public void setDepartingTicketPrice(int adults,int child){
         if((((tripSource == TripSource.BEIJING)||(tripSource == TripSource.NANJING)||(tripSource == TripSource.Shanghai))&&((tripDestination == TripDestination.BEIJING)||(tripDestination == TripDestination.NANJING)||(tripDestination == TripDestination.Shanghai)))||(((tripSource == TripSource.OULU)||(tripSource == TripSource.HELSINKI))&&(tripDestination == TripDestination.OULU)||(tripDestination == TripDestination.HELSINKI))){
             base = 300.0;
-            taxes = base*0.10;
-            fees = base*0.05;
+            taxes = base*0.15;
+            fees = base*0.10;
             if(bookingClass == BookingClass.FIRST){
                charge = 250.0; this.departingTicketPrice = (base + taxes + fees + charge)*(adults+child);}
                 if(bookingClass == BookingClass.BUSINESS){
