@@ -518,6 +518,9 @@ public class FlightBooking {
         "Total ticket price in Euros: "+fb.getTotalTicketPrice());*/
         sc.close();
     }
+    public void displayTripDetails(){
+        
+    }
 
     public TripType getTripType(){
         return tripType;
